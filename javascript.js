@@ -1,9 +1,14 @@
-function onClick(inputName) {
+function onButtonClick() {
+  alert('Button clicked!');
+}
 
-  
-    const myVariableName = { name: "Adam" };
-    console.log(myVariableName.name);
-  
-    const myList = [];
-    console.log(myList[7]);
-  }
+const button = document.querySelector('button');
+button.addEventListener('click', onButtonClick);
+
+const newButton = document.createElement('button');
+newButton.textContent = 'Click me!';
+document.body.appendChild(newButton);
+
+newButton.addEventListener('click', () => {
+  alert('New button clicked!');
+});
