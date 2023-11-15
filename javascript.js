@@ -9,7 +9,7 @@ function onClick(inputValue) {
 
   console.log ('Second name in list of objects -----',users[1].name);
   alert('Hello, ' + inputValue + '!');
-  const url = 'https://pokeapi.co/api/v2/pokemon';
+  const URL = 'https://pokeapi.co/api/v2/pokemon';
 
 
   $.get(URL,function(data, status){
