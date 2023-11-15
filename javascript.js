@@ -15,6 +15,7 @@ function onClick(inputValue) {
   $.get(URL,callback);
    if (status === 'success') ;
    console.log(data.results) ;
+   const pokemonNames = data.results.map(showNames)
 }
 alert('HELLO,  ' + inputname + '!');
 document.getElementById("displayedtext").innerHTML = "now im in control"
