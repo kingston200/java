@@ -12,15 +12,15 @@ function onClick(inputValue) {
   const url = 'https://pokeapi.co/api/v2/pokemon';
 
 
-  $.get(URL,callback);
+  $.get(URL,function(data, status){
    if (status === 'success') ;
    console.log(data.results) ;
    const pokemonNames = data.results.map(showNames)
-}
+})
 alert('HELLO,  ' + inputname + '!');
 document.getElementById("displayedtext").innerHTML = "now im in control"
 
-
+}
 function showNames(pokemon) {
   return pokemon.name
 }
