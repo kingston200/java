@@ -18,7 +18,7 @@ function onClick(inputValue) {
    const pokemonNames = data.results.map(showNames)
 })
 alert('HELLO,  ' + inputname + '!');
-document.getElementById("displayedtext").innerHTML = "now im in control"
+document.getElementById("displayedtext").innerHTML = pokemonNames.join(" ");
 
 }
 function showNames(pokemon) {
