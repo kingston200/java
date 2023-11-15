@@ -1,5 +1,5 @@
 function onClick(inputValue) {
-  document.getElementById("displayedText").innerHTML = "Now I am in control";
+  document.getElementById("displayedText").innerHTML = pokemonNames.join(" ");
   const user = {name: 'Bob'};
   console.log('Hello ' + user.name);
 
