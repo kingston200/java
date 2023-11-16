@@ -1,26 +1,27 @@
 function onClick(inputValue) {
-  document.getElementById("displayedText").innerHTML = pokemonNames.join(" ");
+  document.getElementById("displayedText").innerHTML = "Now I am in control";
   const user = {name: 'Bob'};
   console.log('Hello ' + user.name);
 
-  const names = ['user.name', 'user.name']
-  const users = [{name: 'user.name'}, {name: 'user.name'}]
+  const names = ['Sally', 'Jerome']
+  const users = [{name: 'Sally'}, {name: 'Jerome'}];
   console.log ('First name in list -----',names[0]);
 
   console.log ('Second name in list of objects -----',users[1].name);
-  alert('Hello, ' + inputValue + '!');
   const url = 'https://pokeapi.co/api/v2/pokemon';
-
-
   $.get(url,function(data, status){
    if (status === 'success') {
-    const pokemonNames = data.results.map(showNames)
-  console.log(pokemonNames);
-   document.getElementById("displayedText").innerHTML = pokemonNames.join(" ");
+       const pokemonNames = data.results.map(showNames)
+       console.log(pokemonNames);
+       document.getElementById("displayedText").innerHTML = pokemonNames.join(" ");
    }
+
+
 });
 alert('HELLO,  ' + inputname + '!');
+
 }
+
 function showNames(pokemon) {
   return pokemon.name
 }
