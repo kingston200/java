@@ -4,7 +4,8 @@ function onClick(inputValue) {
   console.log('Hello ' + user.name);
 
   const names = ['Sally', 'Jerome']
-  const users = [{name: 'Sally'}, {name: 'Jerome'}];
+  const users = [{name: 'Sally'}, {name: 'Jerome'}] 
+  const userText = document.getElementById('insertedName').value;
   console.log ('First name in list -----',names[0]);
 
   console.log ('Second name in list of objects -----',users[1].name);
