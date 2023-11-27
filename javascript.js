@@ -26,3 +26,24 @@ alert('HELLO,  ' + inputname + '!');
 function showNames(pokemon) {
   return pokemon.name
 }
+// Import Dialogflow SDK
+import dialogflow from 'dialogflow';
+
+// Create Dialogflow client
+const sessionClient = new dialogflow.SessionsClient();
+
+// Get user's chat message  
+const userMessage = document.getElementById('chatInput').value;
+
+// Send message to Dialogflow agent and get response
+const response = await sessionClient.detectIntent({
+    session: sessionPath,  
+    queryInput: {
+      text: {
+        text: userMessage  
+      }
+    }
+});
+
+// Display chatbot's response
+document.getElementById('chatBotResponse').innerText = response.queryResult.fulfillmentText;
