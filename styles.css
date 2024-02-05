@@ -1,1 +1,12 @@
-
+body {
+    background-color: black;
+  }
+  h1 {
+    color: rgb(239, 17, 17);
+  }
+  P {
+    color: rgb(0, 98, 128);
+  }
+  button {
+    color: rgb(0, 139, 30);
+  }
